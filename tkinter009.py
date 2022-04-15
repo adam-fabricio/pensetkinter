@@ -16,12 +16,17 @@ class MyApp:
         self.button1.configure(text=nome_botao, background="green")
         self.button1.pack(side=LEFT)
         self.button1.focus_force()
+        #self.button1.bind("<Return>", 
+        #                  self.buttonHandler_a(nome_botao, 1, "Boas coisas."))
         
         nome_botao = "Cancel"
-        self.button1 = Button(self.meu_recipiente, 
+        self.button2 = Button(self.meu_recipiente, 
                         command=self.buttonHandler(nome_botao, 2, "Coisas Ruins."))
-        self.button1.configure(text=nome_botao, background="red")
-        self.button1.pack(side=LEFT)
+        self.button2.configure(text=nome_botao, background="red")
+        self.button2.pack(side=LEFT)
+        #self.button2.bind("<Return>", 
+        #                  self.buttonHandler_a(nome_botao, 1, "Boas coisas."))
+        
 
     def buttonHandler(self, arg1, arg2, arg3):
         print(f"Manipulador do botão recebeu {arg1}, {arg2} e {arg3}")
